@@ -1,0 +1,3 @@
+/home/luiz/Simulemt/Build/CMakeFiles/rebuild_cache.dir
+/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir
+/home/luiz/Simulemt/Build/CMakeFiles/edit_cache.dir

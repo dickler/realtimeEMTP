@@ -1,225 +1,174 @@
 #include "mkl.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <algorithm>
 #include <iostream>
 #include <iterator>
 #include <vector>
 #include <cmath>
 #include <fstream>
-#include <stdio.h>
 #include <string>
 #include <sstream>
-#define _USE_MATH_DEFINES
+#define _use_math_defines
 #include <math.h>
 
+/*
+Elements Includes
+*/
 
-#include "Circuit.h"
-#include "ElectricElement.h"
-#include "Resistance.h"
-#include "Capacitor.h"
-#include "DCVoltageSource.h"
-#include "ACVoltageSource.h"
-#include "Inductor.h"
-#include "ACCurrentSource.h"
-#include "DCCurrentSource.h"
-#include "Diode.h"
-#include "SquareWave.h"
-#include "Switch.h"
+#include "Elements.h"
 
 
+#ifdef IdealSwitch
+    #ifdef EXPANDED_SWITCH
+        #undef EXPANDED_SWITCH
+    #endif
+#endif
 
-//This recieves an element and stamps it into the also recieved circuit, after this it deletes the element
-void Stamp(ElectricElement* Element, Circuit& circuit, bool Adm, bool RightHand, bool Del) {
-	if (Adm)
-		(*Element).stamp(circuit);
-	if (RightHand)
-		(*Element).stampRightHand(circuit);
-	if (Del)
-		delete Element;
+#ifdef OptimizeG
+#define EXPANDED_SWITCH
+#endif
+
+/*
+Recieves an element and stamps it in the recieved circuit.
+
+Adm, RightHand and Del determine if:
+Adm -> The Admittance Matrix is going to be stamped.
+RightHand -> RHS Vector is going to be stamped.
+Del -> if the element should be deleted afterwards.
+*/
+void Stamp(ElectricElement* Element, Circuit& circuit,bool Adm,bool RightHand,bool Del) {
+    if (Adm)
+    (*Element).stamp(circuit);
+    if (RightHand)
+    (*Element).stampRightHand(circuit);
+    if (Del)
+    delete Element;
 
 };
 
+/*
+Outputs:
+-Admittance Matrix
+-RHS vector
+-Current Solved Vector
+-Inverted Admittance Matrix
+*/
 void SeeMatrix(Circuit& circuit) {
-	circuit.ToString();
-	circuit.ToStringSource();
-	circuit.ToStringSolved();
-
-}
-
-
-void createFromTxt(std::ifstream& netlist, std::vector<ElectricElement*>& ElectricVector, Circuit& circuit)
-{
-	std::vector<std::string> extraLineTypes;
-	std::vector<int> Nodes;
-	std::string type;
-	std::string name;
-	double DC;
-	int node1;
-	int node2;
-	int Gate;
-	double value;
-	double simTime;
-	double step;
-	int numNodes = 0;
-	int numSource = 0;
-	double frequency;
-	double phase;
-	double SwitchIndex;
-	double OFFSET;
-	std::vector<bool> sVector;
-
-
-	extraLineTypes.push_back("DCV");
-	extraLineTypes.push_back("ACV");
-	extraLineTypes.push_back("L");
-	extraLineTypes.push_back("C");
-	extraLineTypes.push_back("SQV");
-
-
-
-	if (netlist.is_open()); {
-
-		netlist.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		while (netlist >> type >> name) {
-			netlist >> node1 >> node2;
-			netlist.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-
-			if (std::find(Nodes.begin(), Nodes.end(), node1) == Nodes.end()) {
-				Nodes.push_back(node1);
-				numNodes++;
-			}
-			if (std::find(Nodes.begin(), Nodes.end(), node2) == Nodes.end()) {
-				Nodes.push_back(node2);
-				numNodes++;
-			}
-
-			if (std::find(extraLineTypes.begin(), extraLineTypes.end(), type) != extraLineTypes.end()) {
-				numSource++;
-			}
-		}
-
-
-		netlist.clear();
-		netlist.seekg(0, netlist.beg);
-
-		netlist >> name >> simTime >> step;
-
-		circuit.setValues(numNodes - 1, numSource, simTime, step);
-
-		std::ofstream myfile;
-
-		myfile.open("example.txt");
-		for (int i = 0; i < circuit.numNodes; i++) {
-			myfile << 'V' << (i + 1) << '\t';
-		}
-		myfile.close();
-
-		netlist.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		while (netlist >> type) {
-			if (type == "R") {
-				netlist >> name >> node1 >> node2 >> value;
-				Resistance* R = new Resistance(value, node1, node2);
-				Stamp(R, circuit, 1, 0, 1);
-			}
-
-			else if (type == "DCV") {
-				netlist >> name >> node1 >> node2 >> value;
-				DCVoltageSource* DCV = new DCVoltageSource(value, node1, node2, circuit);
-				Stamp(DCV, circuit, 1, 0, 1);
-			}
-
-			else if (type == "L") {
-				netlist >> name >> node1 >> node2 >> value;
-				ElectricVector.push_back(new Inductor(value, node1, node2, circuit));
-			}
-
-			else if (type == "C") {
-				netlist >> name >> node1 >> node2 >> value;
-				ElectricVector.push_back(new Capacitor(value, node1, node2, circuit));
-			}
-
-			else if (type == "ACV") {
-				netlist >> name >> node1 >> node2 >> value >> frequency >> phase;
-				ElectricVector.push_back(new ACVoltageSource(value, frequency, phase, node1, node2, circuit));
-			}
-
-			else if (type == "SQV") {
-				netlist >> name >> node1 >> node2 >> value >> frequency >> phase >> DC >> OFFSET;
-				ElectricVector.push_back(new SquareWave(value, frequency, node1, node2, circuit, phase, DC, OFFSET));
-			}
-
-			else if (type == "ACC") {
-				netlist >> name >> node1 >> node2 >> value >> frequency >> phase;
-				ElectricVector.push_back(new ACCurrentSource(value, frequency, phase, node1, node2, circuit));
-			}
-
-			else if (type == "DCC") {
-				netlist >> name >> node1 >> node2 >> value;
-				DCCurrentSource* DCC = new DCCurrentSource(value, node1, node2);
-				Stamp(DCC, circuit, 0, 1, 1);
-			}
-
-			else if (type == "D") {
-				netlist >> name >> node1 >> node2 >> value;
-				ElectricVector.push_back(new Diode(value, node1, node2));
-			}
-
-			else if (type == "S") {
-				netlist >> name >> node1 >> node2 >> Gate >> value;
-				ElectricVector.push_back(new Switch(value, node1, node2, Gate));
-			}
-
-		}
-
-
-		for (int i = 0; i < ElectricVector.size(); i++) {
-			(*ElectricVector[i]).stamp(circuit);
-		}
-
-		circuit.registerVector();
-	}
-
+    circuit.ToString();
+    circuit.ToStringRHS();
+    circuit.ToStringSolved();
+    circuit.ToStringInv();
 }
 
 
 int main(void) {
 
-	Circuit circuit = Circuit();
-	std::vector<ElectricElement*> ElectricVector;
-	std::ifstream netlist;
-	netlist.open("netlist.txt");
-	createFromTxt(netlist, ElectricVector, circuit);
-	std::ostringstream myStr;
-	myStr << "Time \t Diode \t Switch \n";
-	SeeMatrix(circuit);
-	circuit.InvertMatrix();
 
 
-	for (; circuit.time <= circuit.simTime; circuit.time += circuit.timeStep) {
-		circuit.newStep();
+    /*
+    Declares the variables
+    */
+    Circuit circuit = Circuit();
+    std::ifstream netlist;
 
-		for (auto i : ElectricVector) {
-			Stamp(i, circuit, 0, 1, 0);
-		}
+    circuit.SetOutputFile("example.csv");
+    circuit.addTracker("Iv",2);
+    /*
+    Opens the netlist file and reads it to create the circuit and vectors
+    */
+    netlist.open("netlist.txt");
+    circuit.preSimulation(netlist);
+    circuit.Simulate();
+
+    circuit.closeOutputFile();
+//    std::ostringstream myStr;
+//    /*
+//    Adds an column for Time in the .txt
+//    */
+//    myStr << "Time\n";
 
 
-		circuit.Solve();
+//    /*
+//    For the Pejovic condutance G in the switch, opts between the netlist defined or an optimization.
+//    */
+//    SeeMatrix(circuit);
+//#ifdef OptimizeG
+//    SeeMatrix(circuit);
+//    circuit.optimizeG(SwitchVector, 2, 200);
+//#else
+//    for (int j = 0; j < SwitchVector.size(); j++) {
+//        (*SwitchVector[j]).stamp(circuit);
+//    }
+//#endif
+//    circuit.InvertMatrix();
+//    SeeMatrix(circuit);
 
-		for (int i = 0; i < circuit.totalSize; i++) {
-			myStr << circuit.SolvedMatrix[i] << "\t";
-		}
-
-		myStr << circuit.time;
-		myStr << "\n";
-
-	}
 
 
-	std::ofstream myfile;
-	myfile.open("example.txt", std::ios::out | std::ios::app);
-	myfile << myStr.str();
-	myfile.close();
+//    /*
+//    Starts all switches on for the first iteration.
+//    */
+//    for (int k = 0; k < SwitchVector.size(); k++) {
+//        (*SwitchVector[k]).S = 1;
+//    }
 
-	return 0;
+//    for (; circuit.time <= circuit.simTime; circuit.time += circuit.timeStep) {
+
+
+
+//        /*Switch Keys*/
+//        //if (std::fmod(circuit.time, 50e-6) < 0.33*50e-6) {
+//        //	(*SwitchVector[1]).S = 1;
+//        //}
+//        //else if (std::fmod(circuit.time, 50e-6) > 0.33*50e-6) {
+//        //	(*SwitchVector[1]).S = 0;
+//        //}
+
+
+//        /*
+//        Stamps the mutable vectors.
+//        */
+//        for (auto i : ElectricVector) {
+//            Stamp(i, circuit,0,1,0);
+//        }
+//        for (auto i : SwitchVector) {
+//            Stamp(i, circuit, 0, 1, 0);
+//        }
+//        for (auto i : DynamicVector) {
+//            Stamp(i, circuit, 0, 1, 0);
+//        }
+
+//        /*
+//        Solve the circuit equations
+//        */
+//        circuit.Solve();
+
+
+//        /*
+//        Writes the txt with the variables for each step
+//        */
+//        for (int i = 0; i < circuit.totalSize; i++) {
+//            myStr << circuit.SolvedVector[i] << "\t";
+//        }
+//        myStr << circuit.time;
+//        myStr << "\n";
+
+
+
+//        /*
+//        Loads newStep for the static RHSVector
+//        */
+//        circuit.newStep();
+//    }
+
+//    /*
+//    Closes inserts myStr in the output txt
+//    */
+//    std::ofstream myfile;
+//    myfile.open("example.txt", std::ios::out | std::ios::app);
+//    myfile << myStr.str();
+//    myfile.close();
+
+//    return 0;
 }
