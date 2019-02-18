@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Simulemt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/luiz/Simulemt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/luiz/Simulemt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Simulemt">
+				<Option output="/home/luiz/Simulemt/cmake-build-debug/Simulemt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luiz/Simulemt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/luiz/Simulemt/include"/>
+					<Add directory="/home/luiz/intel/mkl/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 Simulemt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Simulemt/fast">
+				<Option output="/home/luiz/Simulemt/cmake-build-debug/Simulemt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luiz/Simulemt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/luiz/Simulemt/include"/>
+					<Add directory="/home/luiz/intel/mkl/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 Simulemt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/luiz/Simulemt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/luiz/Simulemt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/luiz/Simulemt/include/ACCurrentSource.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/ACVoltageSource.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Capacitor.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Circuit.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/DCCurrentSource.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/DCVoltageSource.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Defines.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Diode.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/DynamicElement.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/ElectricElement.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Inductor.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Resistance.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/SqrWave.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/SquareWave.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Switch.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/switchDevice.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/kernel.c">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/ACCurrentSource.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/ACVoltageSource.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Capacitor.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Circuit.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/DCCurrentSource.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/DCVoltageSource.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Diode.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/DynamicElement.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/ElectricElement.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Inductor.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Resistance.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/SqrWave.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/SquareWave.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Switch.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/switchDevice.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/i_malloc.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_blacs.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_blas.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_cblas.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_cdft.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_cdft_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_cluster_sparse_solver.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_compact.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_df.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_df_defines.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_df_functions.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_df_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_dfti.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_direct_blas.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_direct_blas_kernels.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_direct_call.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_direct_lapack.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_direct_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_dnn.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_dnn_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_dss.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_lapack.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_lapacke.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_pardiso.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_pblas.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_poisson.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_rci.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_scalapack.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_service.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_solvers_ee.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_sparse_handle.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_sparse_qr.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_spblas.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_trans.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_trig_transforms.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_version.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vml.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vml_defines.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vml_functions.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vml_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vsl.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vsl_defines.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vsl_functions.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/intel/mkl/include/mkl_vsl_types.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/CheckLinkerFlag.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/FindMKL.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/LibraryUtils.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
