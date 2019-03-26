@@ -10,5 +10,6 @@ public:
 	double Value0=0;
     virtual void trapStamp(Circuit& circuit)=0;
 	virtual void initialize(Circuit& circuit) = 0;
+
 };
 

@@ -14,5 +14,6 @@ public:
     std::string nodesQuery() override;
 	void stamp(Circuit& circuit) override;
 	void stampRightHand(Circuit& circuit) override;
+    double getCurrent(Circuit& circuit) override;
 
 };

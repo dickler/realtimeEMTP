@@ -15,9 +15,6 @@ ACVoltageSource::ACVoltageSource(double Value, double Frequency, double Phase, i
         this->nodes.push_back(Node2);
 		circuit.SourceId++;
 		ID = circuit.SourceId;
-		std::ofstream myfile;
-		myfile.open("example.txt", std::ios::out | std::ios::app);
-		myfile << 'I' << 'v' << ID << '\t';
 	}
 
 
@@ -85,4 +82,8 @@ ACVoltageSource::ACVoltageSource(double Value, double Frequency, double Phase, i
             nodesStr+= std::to_string(i) + "\n";
         }
         return nodesStr;
+    }
+
+    double ACVoltageSource::getCurrent(Circuit& circuit){
+        return circuit.SolvedVector[circuit.numNodes + ID - 1];
     }

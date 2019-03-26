@@ -25,5 +25,5 @@ public:
 	void stampRightHand(Circuit& circuit) override;
     std::string classQuery() override {return "SQV";}
     std::string nodesQuery() override;
-
+    double getCurrent(Circuit& circuit) override;
 };

@@ -38,7 +38,7 @@ SET(qml_LIBS
 message(STATUS "MKLFOUND: " ${MKL_FOUND})
 
 
-file(GLOB SOURCES ${SOURCES} "src/*.cpp" "include/*.h" kernel.cpp )
+file(GLOB SOURCES ${SOURCES} "src/*.cpp" "include/*.h" kernel.cpp "Build/netlist.txt")
 
 
 include_directories(${PROJECT_SOURCE_DIR}/include)

@@ -32,6 +32,10 @@ mkl.h
 Defines.h
 ../include/Defines.h
 
+../include/CurrentControlledSource.h
+ElectricElement.h
+../include/ElectricElement.h
+
 ../include/DCCurrentSource.h
 ElectricElement.h
 ../include/ElectricElement.h
@@ -85,6 +89,12 @@ SquareWave.h
 ../include/SquareWave.h
 Switch.h
 ../include/Switch.h
+Thyristor.h
+../include/Thyristor.h
+CurrentControlledSource.h
+../include/CurrentControlledSource.h
+VoltageControlledSource.h
+../include/VoltageControlledSource.h
 
 ../include/Inductor.h
 DynamicElement.h
@@ -105,6 +115,14 @@ Circuit.h
 ../include/Switch.h
 switchDevice.h
 ../include/switchDevice.h
+
+../include/Thyristor.h
+switchDevice.h
+../include/switchDevice.h
+
+../include/VoltageControlledSource.h
+ElectricElement.h
+../include/ElectricElement.h
 
 ../include/switchDevice.h
 ElectricElement.h
@@ -190,6 +208,14 @@ QElapsedTimer
 QDebug
 -
 
+/home/luiz/Simulemt/src/CurrentControlledSource.cpp
+CurrentControlledSource.h
+/home/luiz/Simulemt/src/CurrentControlledSource.h
+Circuit.h
+/home/luiz/Simulemt/src/Circuit.h
+math.h
+-
+
 /home/luiz/Simulemt/src/DCCurrentSource.cpp
 DCCurrentSource.h
 /home/luiz/Simulemt/src/DCCurrentSource.h
@@ -242,6 +268,22 @@ Switch.h
 iostream
 -
 fstream
+-
+
+/home/luiz/Simulemt/src/Thyristor.cpp
+Thyristor.h
+/home/luiz/Simulemt/src/Thyristor.h
+iostream
+-
+fstream
+-
+
+/home/luiz/Simulemt/src/VoltageControlledSource.cpp
+VoltageControlledSource.h
+/home/luiz/Simulemt/src/VoltageControlledSource.h
+Circuit.h
+/home/luiz/Simulemt/src/Circuit.h
+math.h
 -
 
 /home/luiz/Simulemt/src/switchDevice.cpp

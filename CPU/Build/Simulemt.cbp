@@ -118,6 +118,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/luiz/Simulemt/Build/netlist.txt">
+			<Option target="Simulemt"/>
+		</Unit>
 		<Unit filename="/home/luiz/Simulemt/include/ACCurrentSource.h">
 			<Option target="Simulemt"/>
 		</Unit>
@@ -128,6 +131,9 @@
 			<Option target="Simulemt"/>
 		</Unit>
 		<Unit filename="/home/luiz/Simulemt/include/Circuit.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/CurrentControlledSource.h">
 			<Option target="Simulemt"/>
 		</Unit>
 		<Unit filename="/home/luiz/Simulemt/include/DCCurrentSource.h">
@@ -163,6 +169,12 @@
 		<Unit filename="/home/luiz/Simulemt/include/Switch.h">
 			<Option target="Simulemt"/>
 		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/Thyristor.h">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/include/VoltageControlledSource.h">
+			<Option target="Simulemt"/>
+		</Unit>
 		<Unit filename="/home/luiz/Simulemt/include/switchDevice.h">
 			<Option target="Simulemt"/>
 		</Unit>
@@ -179,6 +191,9 @@
 			<Option target="Simulemt"/>
 		</Unit>
 		<Unit filename="/home/luiz/Simulemt/src/Circuit.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/CurrentControlledSource.cpp">
 			<Option target="Simulemt"/>
 		</Unit>
 		<Unit filename="/home/luiz/Simulemt/src/DCCurrentSource.cpp">
@@ -206,6 +221,12 @@
 			<Option target="Simulemt"/>
 		</Unit>
 		<Unit filename="/home/luiz/Simulemt/src/Switch.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/Thyristor.cpp">
+			<Option target="Simulemt"/>
+		</Unit>
+		<Unit filename="/home/luiz/Simulemt/src/VoltageControlledSource.cpp">
 			<Option target="Simulemt"/>
 		</Unit>
 		<Unit filename="/home/luiz/Simulemt/src/switchDevice.cpp">

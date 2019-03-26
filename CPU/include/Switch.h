@@ -12,6 +12,7 @@ public:
     std::string classQuery() override {return "S";}
     std::string nodesQuery() override;
     int ID;
+    double getCurrent(Circuit& circuit) override;
 private:
     bool *gate;
 };

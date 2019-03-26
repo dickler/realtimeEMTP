@@ -251,10 +251,10 @@ void Diode::stampRightHand(Circuit& circuit) {
 
 	//Stamps Ih in the correct position in RightHandVector
 	if (n1 != -1) {
-		circuit.RightHandVector[n1] += Ih;;
+        circuit.RightHandVector[n1] += Ih;
 	}
 	if (n2 != -1) {
-		circuit.RightHandVector[n2] -= Ih;;
+        circuit.RightHandVector[n2] -= Ih;
 	}
 
 
@@ -270,6 +270,10 @@ std::string Diode::nodesQuery() {
 
 void Diode::calculateState(){
     this->S = (*(Voltage[0]) - *(Voltage[1]))>0;
+}
+
+double Diode::getCurrent(Circuit &circuit){
+    return (*(Voltage[0]) - *(Voltage[1]))/pow((this->value),(1-2*S));
 }
 
 #endif

@@ -12,3 +12,6 @@
 #include "Diode.h"
 #include "SquareWave.h"
 #include "Switch.h"
+#include "Thyristor.h"
+#include "CurrentControlledSource.h"
+#include "VoltageControlledSource.h"

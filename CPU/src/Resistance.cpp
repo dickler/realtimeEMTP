@@ -70,3 +70,6 @@ std::string Resistance::nodesQuery() {
     return nodesStr;
 }
 
+double Resistance::getCurrent(Circuit &circuit){
+    return (*(this->Voltage[0]) - *(this->Voltage[1]))/this->value;
+}

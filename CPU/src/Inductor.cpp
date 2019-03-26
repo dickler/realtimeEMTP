@@ -175,3 +175,7 @@ std::string Inductor::nodesQuery() {
     }
     return nodesStr;
 }
+
+double Inductor::getCurrent(Circuit &circuit){
+    return this->Ih-(circuit.timeStep / (this->value))*(*(this->Voltage[0]) - *(this->Voltage[1]));
+}
