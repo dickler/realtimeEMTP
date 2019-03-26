@@ -306,4 +306,8 @@ void Switch::calculateState(){
 this->S=*(this->gate);
 }
 
+double Switch::getCurrent(Circuit &circuit){
+    return (*Voltage[0]-*Voltage[1])*pow((this->value),(2*this->S-1));
+}
+
 #endif

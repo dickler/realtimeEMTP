@@ -153,9 +153,33 @@ CMakeFiles/Simulemt.dir/src/Circuit.cpp.o.provides: CMakeFiles/Simulemt.dir/src/
 CMakeFiles/Simulemt.dir/src/Circuit.cpp.o.provides.build: CMakeFiles/Simulemt.dir/src/Circuit.cpp.o
 
 
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o: CMakeFiles/Simulemt.dir/flags.make
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o: ../src/CurrentControlledSource.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o -c /home/luiz/Simulemt/src/CurrentControlledSource.cpp
+
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luiz/Simulemt/src/CurrentControlledSource.cpp > CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.i
+
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luiz/Simulemt/src/CurrentControlledSource.cpp -o CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.s
+
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.requires:
+
+.PHONY : CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.requires
+
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.provides: CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.provides.build
+.PHONY : CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.provides
+
+CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.provides.build: CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o
+
+
 CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o: ../src/DCCurrentSource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o -c /home/luiz/Simulemt/src/DCCurrentSource.cpp
 
 CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o.provides.build: CMakeFiles/Sim
 
 CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o: ../src/DCVoltageSource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o -c /home/luiz/Simulemt/src/DCVoltageSource.cpp
 
 CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o.provides.build: CMakeFiles/Sim
 
 CMakeFiles/Simulemt.dir/src/Diode.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/Diode.cpp.o: ../src/Diode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Simulemt.dir/src/Diode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Simulemt.dir/src/Diode.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/Diode.cpp.o -c /home/luiz/Simulemt/src/Diode.cpp
 
 CMakeFiles/Simulemt.dir/src/Diode.cpp.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/Simulemt.dir/src/Diode.cpp.o.provides.build: CMakeFiles/Simulemt.dir/
 
 CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.o: ../src/DynamicElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.o -c /home/luiz/Simulemt/src/DynamicElement.cpp
 
 CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/Simulemt.dir/src/DynamicElement.cpp.o.provides.build: CMakeFiles/Simu
 
 CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.o: ../src/ElectricElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.o -c /home/luiz/Simulemt/src/ElectricElement.cpp
 
 CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/Simulemt.dir/src/ElectricElement.cpp.o.provides.build: CMakeFiles/Sim
 
 CMakeFiles/Simulemt.dir/src/Inductor.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/Inductor.cpp.o: ../src/Inductor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Simulemt.dir/src/Inductor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Simulemt.dir/src/Inductor.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/Inductor.cpp.o -c /home/luiz/Simulemt/src/Inductor.cpp
 
 CMakeFiles/Simulemt.dir/src/Inductor.cpp.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/Simulemt.dir/src/Inductor.cpp.o.provides.build: CMakeFiles/Simulemt.d
 
 CMakeFiles/Simulemt.dir/src/Resistance.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/Resistance.cpp.o: ../src/Resistance.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Simulemt.dir/src/Resistance.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Simulemt.dir/src/Resistance.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/Resistance.cpp.o -c /home/luiz/Simulemt/src/Resistance.cpp
 
 CMakeFiles/Simulemt.dir/src/Resistance.cpp.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/Simulemt.dir/src/Resistance.cpp.o.provides.build: CMakeFiles/Simulemt
 
 CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o: ../src/SquareWave.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o -c /home/luiz/Simulemt/src/SquareWave.cpp
 
 CMakeFiles/Simulemt.dir/src/SquareWave.cpp.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o.provides.build: CMakeFiles/Simulemt
 
 CMakeFiles/Simulemt.dir/src/Switch.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/Switch.cpp.o: ../src/Switch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Simulemt.dir/src/Switch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Simulemt.dir/src/Switch.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/Switch.cpp.o -c /home/luiz/Simulemt/src/Switch.cpp
 
 CMakeFiles/Simulemt.dir/src/Switch.cpp.i: cmake_force
@@ -369,9 +393,57 @@ CMakeFiles/Simulemt.dir/src/Switch.cpp.o.provides: CMakeFiles/Simulemt.dir/src/S
 CMakeFiles/Simulemt.dir/src/Switch.cpp.o.provides.build: CMakeFiles/Simulemt.dir/src/Switch.cpp.o
 
 
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o: CMakeFiles/Simulemt.dir/flags.make
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o: ../src/Thyristor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o -c /home/luiz/Simulemt/src/Thyristor.cpp
+
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Simulemt.dir/src/Thyristor.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luiz/Simulemt/src/Thyristor.cpp > CMakeFiles/Simulemt.dir/src/Thyristor.cpp.i
+
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulemt.dir/src/Thyristor.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luiz/Simulemt/src/Thyristor.cpp -o CMakeFiles/Simulemt.dir/src/Thyristor.cpp.s
+
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.requires:
+
+.PHONY : CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.requires
+
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.provides: CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.provides.build
+.PHONY : CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.provides
+
+CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.provides.build: CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o
+
+
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o: CMakeFiles/Simulemt.dir/flags.make
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o: ../src/VoltageControlledSource.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o -c /home/luiz/Simulemt/src/VoltageControlledSource.cpp
+
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luiz/Simulemt/src/VoltageControlledSource.cpp > CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.i
+
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luiz/Simulemt/src/VoltageControlledSource.cpp -o CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.s
+
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.requires:
+
+.PHONY : CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.requires
+
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.provides: CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.provides.build
+.PHONY : CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.provides
+
+CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.provides.build: CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o
+
+
 CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o: ../src/switchDevice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o -c /home/luiz/Simulemt/src/switchDevice.cpp
 
 CMakeFiles/Simulemt.dir/src/switchDevice.cpp.i: cmake_force
@@ -395,7 +467,7 @@ CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o.provides.build: CMakeFiles/Simule
 
 CMakeFiles/Simulemt.dir/kernel.cpp.o: CMakeFiles/Simulemt.dir/flags.make
 CMakeFiles/Simulemt.dir/kernel.cpp.o: ../kernel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Simulemt.dir/kernel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Simulemt.dir/kernel.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Simulemt.dir/kernel.cpp.o -c /home/luiz/Simulemt/kernel.cpp
 
 CMakeFiles/Simulemt.dir/kernel.cpp.i: cmake_force
@@ -423,6 +495,7 @@ Simulemt_OBJECTS = \
 "CMakeFiles/Simulemt.dir/src/ACVoltageSource.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/Capacitor.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/Circuit.cpp.o" \
+"CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/Diode.cpp.o" \
@@ -432,6 +505,8 @@ Simulemt_OBJECTS = \
 "CMakeFiles/Simulemt.dir/src/Resistance.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/Switch.cpp.o" \
+"CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o" \
+"CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o" \
 "CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o" \
 "CMakeFiles/Simulemt.dir/kernel.cpp.o"
 
@@ -442,6 +517,7 @@ Simulemt: CMakeFiles/Simulemt.dir/src/ACCurrentSource.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/ACVoltageSource.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/Capacitor.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/Circuit.cpp.o
+Simulemt: CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/Diode.cpp.o
@@ -451,6 +527,8 @@ Simulemt: CMakeFiles/Simulemt.dir/src/Inductor.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/Resistance.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/Switch.cpp.o
+Simulemt: CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o
+Simulemt: CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/kernel.cpp.o
 Simulemt: CMakeFiles/Simulemt.dir/build.make
@@ -465,7 +543,7 @@ Simulemt: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.9.5
 Simulemt: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.5
 Simulemt: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 Simulemt: CMakeFiles/Simulemt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Simulemt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luiz/Simulemt/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Simulemt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Simulemt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -477,6 +555,7 @@ CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/ACCurrentSource.cp
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/ACVoltageSource.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Capacitor.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Circuit.cpp.o.requires
+CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Diode.cpp.o.requires
@@ -486,6 +565,8 @@ CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Inductor.cpp.o.req
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Resistance.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Switch.cpp.o.requires
+CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o.requires
+CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o.requires
 CMakeFiles/Simulemt.dir/requires: CMakeFiles/Simulemt.dir/kernel.cpp.o.requires
 

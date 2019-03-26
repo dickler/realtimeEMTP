@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/luiz/Simulemt/src/ACVoltageSource.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/ACVoltageSource.cpp.o"
   "/home/luiz/Simulemt/src/Capacitor.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/Capacitor.cpp.o"
   "/home/luiz/Simulemt/src/Circuit.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/Circuit.cpp.o"
+  "/home/luiz/Simulemt/src/CurrentControlledSource.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o"
   "/home/luiz/Simulemt/src/DCCurrentSource.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/DCCurrentSource.cpp.o"
   "/home/luiz/Simulemt/src/DCVoltageSource.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/DCVoltageSource.cpp.o"
   "/home/luiz/Simulemt/src/Diode.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/Diode.cpp.o"
@@ -18,6 +19,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/luiz/Simulemt/src/Resistance.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/Resistance.cpp.o"
   "/home/luiz/Simulemt/src/SquareWave.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/SquareWave.cpp.o"
   "/home/luiz/Simulemt/src/Switch.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/Switch.cpp.o"
+  "/home/luiz/Simulemt/src/Thyristor.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o"
+  "/home/luiz/Simulemt/src/VoltageControlledSource.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o"
   "/home/luiz/Simulemt/src/switchDevice.cpp" "/home/luiz/Simulemt/Build/CMakeFiles/Simulemt.dir/src/switchDevice.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

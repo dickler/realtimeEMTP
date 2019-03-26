@@ -48,7 +48,7 @@ public:
     std::vector<double> InvAdmittanceMatrix;	// Aij = A[ (i*totalSize) + j ]
     std::vector<std::vector<double>*> MatrixStorage;
     std::vector<std::vector<double>*> invMatrixStorage;
-
+    std::vector<std::string> NameVector;
     std::vector<bool*>               controlSignals;
 	double V0 = 0;
 	double time = 0;	//Current time in the simulation
@@ -122,6 +122,10 @@ public:
     void createStateMatrices();
 
     void linkElements();
+
+    void storeNames();
+
+    ElectricElement* requestElement(std::string name);
 
     void preSimulation(std::ifstream &netlist);
 

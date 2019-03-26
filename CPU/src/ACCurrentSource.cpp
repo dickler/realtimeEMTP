@@ -15,7 +15,7 @@ ACCurrentSource::ACCurrentSource(double Value, double Frequency, double Phase, i
 }
 
 
-void ACCurrentSource::stamp(Circuit& circuit) {};
+void ACCurrentSource::stamp(Circuit& circuit) {}
 
 
 
@@ -56,3 +56,9 @@ std::string ACCurrentSource::nodesQuery() {
     }
     return nodesStr;
 }
+
+double ACCurrentSource::getCurrent(Circuit& circuit){
+    return (this->value)*sin((2 * double(M_PI)*(this->Frequency)*(circuit.time)) + this->Phase);
+}
+
+

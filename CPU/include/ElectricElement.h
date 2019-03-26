@@ -21,9 +21,12 @@ public:
 	virtual void stampRightHand(Circuit& circuit) = 0;
     virtual std::string classQuery() = 0;
     virtual std::string nodesQuery() = 0;
+    virtual double getVoltage(Circuit& circuit);
+    virtual double getCurrent(Circuit& circuit) = 0;
 	std::string Name;
+
     std::vector<double*> Voltage;
-    void linkCircuit(Circuit& circuit);
+    virtual void linkCircuit(Circuit& circuit);
     std::vector<int> nodes;
 
 };

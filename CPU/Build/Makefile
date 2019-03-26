@@ -258,6 +258,33 @@ src/Circuit.cpp.s:
 	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/Circuit.cpp.s
 .PHONY : src/Circuit.cpp.s
 
+src/CurrentControlledSource.o: src/CurrentControlledSource.cpp.o
+
+.PHONY : src/CurrentControlledSource.o
+
+# target to build an object file
+src/CurrentControlledSource.cpp.o:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.o
+.PHONY : src/CurrentControlledSource.cpp.o
+
+src/CurrentControlledSource.i: src/CurrentControlledSource.cpp.i
+
+.PHONY : src/CurrentControlledSource.i
+
+# target to preprocess a source file
+src/CurrentControlledSource.cpp.i:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.i
+.PHONY : src/CurrentControlledSource.cpp.i
+
+src/CurrentControlledSource.s: src/CurrentControlledSource.cpp.s
+
+.PHONY : src/CurrentControlledSource.s
+
+# target to generate assembly for a file
+src/CurrentControlledSource.cpp.s:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/CurrentControlledSource.cpp.s
+.PHONY : src/CurrentControlledSource.cpp.s
+
 src/DCCurrentSource.o: src/DCCurrentSource.cpp.o
 
 .PHONY : src/DCCurrentSource.o
@@ -501,6 +528,60 @@ src/Switch.cpp.s:
 	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/Switch.cpp.s
 .PHONY : src/Switch.cpp.s
 
+src/Thyristor.o: src/Thyristor.cpp.o
+
+.PHONY : src/Thyristor.o
+
+# target to build an object file
+src/Thyristor.cpp.o:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/Thyristor.cpp.o
+.PHONY : src/Thyristor.cpp.o
+
+src/Thyristor.i: src/Thyristor.cpp.i
+
+.PHONY : src/Thyristor.i
+
+# target to preprocess a source file
+src/Thyristor.cpp.i:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/Thyristor.cpp.i
+.PHONY : src/Thyristor.cpp.i
+
+src/Thyristor.s: src/Thyristor.cpp.s
+
+.PHONY : src/Thyristor.s
+
+# target to generate assembly for a file
+src/Thyristor.cpp.s:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/Thyristor.cpp.s
+.PHONY : src/Thyristor.cpp.s
+
+src/VoltageControlledSource.o: src/VoltageControlledSource.cpp.o
+
+.PHONY : src/VoltageControlledSource.o
+
+# target to build an object file
+src/VoltageControlledSource.cpp.o:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.o
+.PHONY : src/VoltageControlledSource.cpp.o
+
+src/VoltageControlledSource.i: src/VoltageControlledSource.cpp.i
+
+.PHONY : src/VoltageControlledSource.i
+
+# target to preprocess a source file
+src/VoltageControlledSource.cpp.i:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.i
+.PHONY : src/VoltageControlledSource.cpp.i
+
+src/VoltageControlledSource.s: src/VoltageControlledSource.cpp.s
+
+.PHONY : src/VoltageControlledSource.s
+
+# target to generate assembly for a file
+src/VoltageControlledSource.cpp.s:
+	$(MAKE) -f CMakeFiles/Simulemt.dir/build.make CMakeFiles/Simulemt.dir/src/VoltageControlledSource.cpp.s
+.PHONY : src/VoltageControlledSource.cpp.s
+
 src/switchDevice.o: src/switchDevice.cpp.o
 
 .PHONY : src/switchDevice.o
@@ -552,6 +633,9 @@ help:
 	@echo "... src/Circuit.o"
 	@echo "... src/Circuit.i"
 	@echo "... src/Circuit.s"
+	@echo "... src/CurrentControlledSource.o"
+	@echo "... src/CurrentControlledSource.i"
+	@echo "... src/CurrentControlledSource.s"
 	@echo "... src/DCCurrentSource.o"
 	@echo "... src/DCCurrentSource.i"
 	@echo "... src/DCCurrentSource.s"
@@ -579,6 +663,12 @@ help:
 	@echo "... src/Switch.o"
 	@echo "... src/Switch.i"
 	@echo "... src/Switch.s"
+	@echo "... src/Thyristor.o"
+	@echo "... src/Thyristor.i"
+	@echo "... src/Thyristor.s"
+	@echo "... src/VoltageControlledSource.o"
+	@echo "... src/VoltageControlledSource.i"
+	@echo "... src/VoltageControlledSource.s"
 	@echo "... src/switchDevice.o"
 	@echo "... src/switchDevice.i"
 	@echo "... src/switchDevice.s"

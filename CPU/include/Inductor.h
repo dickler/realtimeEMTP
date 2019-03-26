@@ -22,4 +22,5 @@ public:
 	void initialize(Circuit& circuit) override;
     std::string classQuery() override {return "I";}
     std::string nodesQuery() override;
+    double getCurrent(Circuit& circuit) override;
 };

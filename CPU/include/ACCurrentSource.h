@@ -21,6 +21,7 @@ public:
 	void stampRightHand(Circuit& circuit) override;
     std::string classQuery() override {return "ACC";}
     std::string nodesQuery() override;
+    double getCurrent(Circuit& circuit) override;
 
 
 

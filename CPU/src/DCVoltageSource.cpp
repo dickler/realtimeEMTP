@@ -73,3 +73,7 @@ std::string DCVoltageSource::nodesQuery() {
     }
     return nodesStr;
 }
+
+double DCVoltageSource::getCurrent(Circuit &circuit){
+    return circuit.SolvedVector[circuit.numNodes + ID - 1];
+}

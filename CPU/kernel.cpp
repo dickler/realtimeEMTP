@@ -73,102 +73,14 @@ int main(void) {
     std::ifstream netlist;
 
     circuit.SetOutputFile("example.csv");
-    circuit.addTracker("Iv",2);
+    circuit.addTracker("V1",1);
+//    circuit.addTracker("V2",3);
+
     /*
     Opens the netlist file and reads it to create the circuit and vectors
     */
     netlist.open("netlist.txt");
     circuit.preSimulation(netlist);
     circuit.Simulate();
-
     circuit.closeOutputFile();
-//    std::ostringstream myStr;
-//    /*
-//    Adds an column for Time in the .txt
-//    */
-//    myStr << "Time\n";
-
-
-//    /*
-//    For the Pejovic condutance G in the switch, opts between the netlist defined or an optimization.
-//    */
-//    SeeMatrix(circuit);
-//#ifdef OptimizeG
-//    SeeMatrix(circuit);
-//    circuit.optimizeG(SwitchVector, 2, 200);
-//#else
-//    for (int j = 0; j < SwitchVector.size(); j++) {
-//        (*SwitchVector[j]).stamp(circuit);
-//    }
-//#endif
-//    circuit.InvertMatrix();
-//    SeeMatrix(circuit);
-
-
-
-//    /*
-//    Starts all switches on for the first iteration.
-//    */
-//    for (int k = 0; k < SwitchVector.size(); k++) {
-//        (*SwitchVector[k]).S = 1;
-//    }
-
-//    for (; circuit.time <= circuit.simTime; circuit.time += circuit.timeStep) {
-
-
-
-//        /*Switch Keys*/
-//        //if (std::fmod(circuit.time, 50e-6) < 0.33*50e-6) {
-//        //	(*SwitchVector[1]).S = 1;
-//        //}
-//        //else if (std::fmod(circuit.time, 50e-6) > 0.33*50e-6) {
-//        //	(*SwitchVector[1]).S = 0;
-//        //}
-
-
-//        /*
-//        Stamps the mutable vectors.
-//        */
-//        for (auto i : ElectricVector) {
-//            Stamp(i, circuit,0,1,0);
-//        }
-//        for (auto i : SwitchVector) {
-//            Stamp(i, circuit, 0, 1, 0);
-//        }
-//        for (auto i : DynamicVector) {
-//            Stamp(i, circuit, 0, 1, 0);
-//        }
-
-//        /*
-//        Solve the circuit equations
-//        */
-//        circuit.Solve();
-
-
-//        /*
-//        Writes the txt with the variables for each step
-//        */
-//        for (int i = 0; i < circuit.totalSize; i++) {
-//            myStr << circuit.SolvedVector[i] << "\t";
-//        }
-//        myStr << circuit.time;
-//        myStr << "\n";
-
-
-
-//        /*
-//        Loads newStep for the static RHSVector
-//        */
-//        circuit.newStep();
-//    }
-
-//    /*
-//    Closes inserts myStr in the output txt
-//    */
-//    std::ofstream myfile;
-//    myfile.open("example.txt", std::ios::out | std::ios::app);
-//    myfile << myStr.str();
-//    myfile.close();
-
-//    return 0;
 }
