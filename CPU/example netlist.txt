@@ -1,0 +1,35 @@
+Retificador com indutor
+time 0.05 1e-6
+ACV va 1 0 120 60 0 0
+ACV vb 2 0 120 60 240 0
+ACV vc 3 0 120 60 120 0
+L l1 1 4 1e-3 0
+L l1 2 5 1e-3 0
+L l1 3 6 1e-3 0
+TH s1 4 7 1e6
+TH s2 8 6 1e6
+TH s3 5 7 1e6
+TH s4 8 4 1e6
+TH s5 6 7 1e6
+TH s6 8 5 1e6
+L l1 7 8 1e-3 0
+
+Retificador com resistor
+time 0.05 1e-6
+ACV va 1 0 120 60 0 0
+ACV vb 2 0 120 60 240 0
+ACV vc 3 0 120 60 120 0
+TH s1 1 4 1e6
+TH s2 5 3 1e6
+TH s3 2 4 1e6
+TH s4 5 1 1e6
+TH s5 3 4 1e6
+TH s6 5 2 1e6
+R r1 4 5 10
+
+Teste Diodo
+time 0.05 1e-6
+ACV va 1 0 120 60 0 0
+D d1 2 1 1e9
+R r1 2 3 10
+D d2 3 0 1e9

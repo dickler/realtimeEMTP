@@ -15,5 +15,6 @@ public:
     std::string classQuery() override {return "D";}
     std::string nodesQuery() override;
     int ID;
+    double getCurrent(Circuit& circuit) override;
 };
 

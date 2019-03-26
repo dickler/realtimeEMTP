@@ -12,3 +12,7 @@ void ElectricElement::linkCircuit(Circuit& circuit){
         else this->Voltage.push_back(&circuit.SolvedVector[i-1]);
     }
 }
+
+double ElectricElement::getVoltage(Circuit& circuit){
+    return *Voltage[0]-*Voltage[1];
+};

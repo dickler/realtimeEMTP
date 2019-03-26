@@ -17,4 +17,5 @@ public:
     std::string classQuery() override {return "DCV";}
     std::string nodesQuery() override;
     int ID;
+    double getCurrent(Circuit& circuit) override;
 };

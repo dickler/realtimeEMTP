@@ -27,7 +27,7 @@ void Capacitor::trapStamp(Circuit &circuit){
 
     Calculating ik,m as a parallel circuit of an Coductance and a Current Source:
 
-    ik,m(t) = Ik,m(t-dt) + G*Vk,m(t)
+    ik,m(t) = - Ik,m(t-dt) - G*Vk,m(t)
 
     Then we have:
     Ik,m(t-dt) = - Ik,m(t-2*dt) - 2 * G*Vk,m(t-dt).
@@ -114,7 +114,7 @@ void Capacitor::stampRightHand(Circuit& circuit) {
 
 	Calculating ik,m as a parallel circuit of an Coductance and a Current Source:
 	
-	ik,m(t) = Ik,m(t-dt) + G*Vk,m(t)
+    ik,m(t) = -Ik,m(t-dt) - G*Vk,m(t)
 
 	Then we have:
 	Ik,m(t-dt) = - Ik,m(t-2*dt) - 2 * G*Vk,m(t-dt).
@@ -168,4 +168,8 @@ std::string Capacitor::nodesQuery() {
         nodesStr+= std::to_string(i) + "\n";
     }
     return nodesStr;
+}
+
+double Capacitor::getCurrent(Circuit &circuit){
+    return -(this->value)/(circuit.timeStep)*(*(Voltage[1])-*(Voltage[0]))+this->Ih;
 }

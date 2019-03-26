@@ -53,3 +53,6 @@ std::string DCCurrentSource::nodesQuery() {
     return nodesStr;
 }
 
+double DCCurrentSource::getCurrent(Circuit &circuit){
+    return this->value;
+}

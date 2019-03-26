@@ -91,3 +91,7 @@ std::string SquareWave::nodesQuery() {
     }
     return nodesStr;
 }
+
+double SquareWave::getCurrent(Circuit &circuit){
+    return  circuit.SolvedVector[circuit.numNodes + ID - 1];
+}

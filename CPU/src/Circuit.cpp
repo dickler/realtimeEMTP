@@ -10,7 +10,7 @@
 #include <complex>
 #include "Elements.h"
 #define maxSwitches 256
-#define TIMED
+//#define TIMED
 #ifdef TIMED
 #include <QElapsedTimer>
 #include <QDebug>
@@ -127,7 +127,7 @@ void Circuit::Solve() {
 
     int currentState = this->readState();
     std::vector<double>  backupSolved;
-    this->switchFlag=0;
+
 
 	a = new double[this->totalSize*this->totalSize]();
 	b = new double[this->totalSize]();
@@ -151,25 +151,33 @@ void Circuit::Solve() {
     backupSolved = this->SolvedVector;
 	//Pass the result to its member SolvedVector
     this->SolvedVector = result;
-    for(switchDevice* i:this->SwitchVector){
-        if(i->classQuery() == "D"){
+    if(this->switchFlag) {
+        this->switchFlag=0;
+
+    }
+    else{
+        this->newStep();
+        this->trapStepStamp();
+        for(switchDevice* i:this->SwitchVector){
+        if(std::string("D TH").find(i->classQuery()) != std::string::npos){
             i->calculateState();
         }
     }
     if(currentState != this->readState()){
         this->SolvedVector = backupSolved;
         this->importState();
-        this->newStep();
-        this->RHSStamp();
         this->Solve();
         this->switchFlag=1;
-        std::cout <<"\\/\\/\\/\\/ SWITCH CHANGE HERE \\/\\/\\/\\/\n";
-
+    }
+    else{
+        this->setState(currentState);
+    }
     }
 	//Deletes the "new" variables
 	delete[] a, b, ipiv;
-    float nsec = timer.nsecsElapsed();
 #ifdef TIMED
+    float nsec = timer.nsecsElapsed();
+
     std::cout << "The operation took " << nsec << " nanoseconds\n\n";
 #endif
 };
@@ -670,7 +678,24 @@ void Circuit::createElement(std::string Line){
                                              std::stoi(Arguments[4]), *this));
         this->SwitchVector[0]->Name = Arguments[1];;
     }
-
+    else if (Arguments[0] == "TH") {
+        // name >> node1 >> node2 >> value;
+        this->SwitchVector.insert(this->SwitchVector.begin(),
+                                  new Thyristor(std::stod(Arguments[4]), std::stoi(Arguments[2]), std::stoi(Arguments[3]), *this));
+        this->SwitchVector[0]->Name = Arguments[1];
+    }
+    else if (Arguments[0] == "CCS"){
+        //name >> node1 >> node2 >> gain >> element >> type;
+        this->ElectricVector.insert(this->ElectricVector.begin(),
+                                   new CurrentControlledSource(std::stod(Arguments[4]), std::stoi(Arguments[2]), std::stoi(Arguments[3]),Arguments[5], Arguments[6], *this));
+        this->ElectricVector[0]->Name = Arguments[1];
+    }
+    else if (Arguments[0] == "VCS"){
+        //name >> node1 >> node2 >> gain >> element >> type;
+        this->ElectricVector.insert(this->ElectricVector.begin(),
+                                   new VoltageControlledSource(std::stod(Arguments[4]), std::stoi(Arguments[2]), std::stoi(Arguments[3]),Arguments[5], Arguments[6], *this));
+        this->ElectricVector[0]->Name = Arguments[1];
+    }
 }
 
 /*
@@ -775,9 +800,6 @@ void Circuit::createStateMatrices(){
     for(int i = 0; i<pow(2,ns);i++){
         this->Load();
         this->setState(i);
-        std::cout << this->readState() << "\n";
-        this-> setState(this->readState());
-        std::cout << this->readState()<<"\n";
         for(switchDevice* j : this->SwitchVector){
             j->stamp(*this);
             std::cout << j->Name << " " <<  j->S<<"\n";
@@ -787,26 +809,85 @@ void Circuit::createStateMatrices(){
 
         this->InvertMatrix();
         this->ToStringInv();
-        this->invMatrixStorage.push_back(new std::vector<double>(this->AdmittanceMatrix));
-        this->MatrixStorage.push_back(new std::vector<double>(this->InvAdmittanceMatrix));
+        this->MatrixStorage.push_back(new std::vector<double>(this->AdmittanceMatrix));
+        this->invMatrixStorage.push_back(new std::vector<double>(this->InvAdmittanceMatrix));
     }
 }
 
 void Circuit::linkElements(){
+    for(ElectricElement* i: SingleStampVector) i->linkCircuit(*this);
+    for(ElectricElement* i: ElectricVector) i->linkCircuit(*this);
     for(ElectricElement* i: DynamicVector) i->linkCircuit(*this);
     for(ElectricElement* i: SwitchVector) i->linkCircuit(*this);
+}
+
+void Circuit::storeNames(){
+    for(ElectricElement* i:this->SingleStampVector){
+        if(std::find(this->NameVector.begin(), this->NameVector.end(), i->Name) != this->NameVector.end()) {
+            std::cout << "\n\"" << i->Name << "\" has been used more than once in your circuit, this can cause problems with controlled sources.\n\n";
+        }
+        this->NameVector.push_back(i->Name);
+    }
+    for(ElectricElement* i:this->ElectricVector){
+        if(std::find(this->NameVector.begin(), this->NameVector.end(), i->Name) != this->NameVector.end()) {
+            std::cout << "\n\"" << i->Name << "\" has been used more than once in your circuit, this can cause problems with controlled sources.\n\n";
+        }
+        this->NameVector.push_back(i->Name);
+    }
+    for(ElectricElement* i:this->DynamicVector) {
+        if(std::find(this->NameVector.begin(), this->NameVector.end(), i->Name) != this->NameVector.end()) {
+            std::cout << "\n\"" << i->Name << "\" has been used more than once in your circuit, this can cause problems with controlled sources.\n\n";
+        }
+        this->NameVector.push_back(i->Name);
+    };
+    for(ElectricElement* i:this->SwitchVector){
+        if(std::find(this->NameVector.begin(), this->NameVector.end(), i->Name) != this->NameVector.end()) {
+            std::cout << "\n\"" << i->Name << "\" has been used more than once in your circuit, this can cause problems with controlled sources.\n\n";
+        }
+        this->NameVector.push_back(i->Name);
+    } ;
+
+
+}
+
+ElectricElement* Circuit::requestElement(std::string name){
+    int index=0;
+    std::vector<std::string>::iterator it = std::find(this->NameVector.begin(), this->NameVector.end(), name);
+    if (it == this->NameVector.end())
+        std::cout << ("WARNING: NO \""+name+"\" ELEMENT FOUND.\n");
+    else{
+        index = std::distance(this->NameVector.begin(), it);
+        if(index<this->SingleStampVector.size()){
+            return SingleStampVector[index];
+
+        }
+        else if(index<this->SingleStampVector.size()+this->ElectricVector.size()){
+            index -= this->SingleStampVector.size();
+            return ElectricVector[index];
+        }
+        else if(index<this->SingleStampVector.size()+this->ElectricVector.size()+this->DynamicVector.size()){
+            index -= this->SingleStampVector.size()+this->ElectricVector.size();
+            return DynamicVector[index];
+        }
+        else{
+            index -= this->SingleStampVector.size()+this->DynamicVector.size()+this->ElectricVector.size();
+            return SwitchVector[index];
+        }
+}
 }
 
 void Circuit::importState(){
     int state;
     state = this->readState();
-    this->InvAdmittanceMatrix = *(this->MatrixStorage[state]);
-    this->AdmittanceMatrix = *(this->invMatrixStorage[state]);
+    this->InvAdmittanceMatrix = *(this->invMatrixStorage[state]);
+    this->AdmittanceMatrix = *(this->MatrixStorage[state]);
 }
 
 void Circuit::preSimulation(std::ifstream &netlist){
     this->importNetlist(netlist);
     this->calculateDimension();
+    this->storeNames();
+
     this->staticAdmittanceStamp();
     this->staticRHSStamp();
     this->Save();
@@ -818,36 +899,26 @@ void Circuit::preSimulation(std::ifstream &netlist){
 void Circuit::Simulate(){
     this->time=0;
     this->importState();
-    int pwm=0;
-    int state;
-    int prestate=0;
-    int count=0;
-//    *this->controlSignals[0]=1;
     while(this->time<this->simTime){
         //
         //CHANGE controlSignal HERE
         //
-
-        if(pwm++>=50&&controlSignals.size()>0){
-            pwm = 0;
-            *(this->controlSignals[0]) = !(*(this->controlSignals[0]));
-//            *(this->controlSignals[1]) = !(*(this->controlSignals[1]));
-        }
-
+        //
+        //END CHANGE controlSignal Here
+        //
         for(switchDevice* i: this->SwitchVector){
             i->calculateState();
         }
-
-
         this->importState();
         this->newStep();
         this->RHSStamp();
         this->Solve();
-        std::cout << this->readState() << "\n";
-        if(this->switchFlag==1)this->time += this->timeStep;
+//        this->ToStringSolved();
+//        std::cout << this->readState() << "\n";
+        if(this->switchFlag==1){
+            this->time += this->timeStep;
+        }
         if(this->outputFile.is_open()) this->writeOutput();
-
-
         this->time += this->timeStep;
     }
 }

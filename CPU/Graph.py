@@ -3,6 +3,7 @@ import csv
 
 x = []
 y = []
+y1= []
 
 with open('Build/example.csv','r') as csvfile:
     plots = csv.reader(csvfile, delimiter='\t')
