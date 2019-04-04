@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="clocked_led_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="clocked_led_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="143833333334fs"></ZoomStartTime>
+      <ZoomEndTime time="486833333335fs"></ZoomEndTime>
+      <Cursor1Time time="201000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/clocked_led_tb/clk_pin_p" type="logic">
+      <obj_property name="ElementShortName">clk_pin_p</obj_property>
+      <obj_property name="ObjectShortName">clk_pin_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clk_pin_n" type="logic">
+      <obj_property name="ElementShortName">clk_pin_n</obj_property>
+      <obj_property name="ObjectShortName">clk_pin_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/rst_pin" type="logic">
+      <obj_property name="ElementShortName">rst_pin</obj_property>
+      <obj_property name="ObjectShortName">rst_pin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/led_pins" type="array">
+      <obj_property name="ElementShortName">led_pins[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_pins[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/a_p" type="array">
+      <obj_property name="ElementShortName">a_p[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_p[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/a_n" type="array">
+      <obj_property name="ElementShortName">a_n[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_n[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/b_p" type="array">
+      <obj_property name="ElementShortName">b_p[15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/b_n" type="array">
+      <obj_property name="ElementShortName">b_n[15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_n[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/data_clk_p" type="logic">
+      <obj_property name="ElementShortName">data_clk_p</obj_property>
+      <obj_property name="ObjectShortName">data_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/data_clk_n" type="logic">
+      <obj_property name="ElementShortName">data_clk_n</obj_property>
+      <obj_property name="ObjectShortName">data_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/sync_p" type="logic">
+      <obj_property name="ElementShortName">sync_p</obj_property>
+      <obj_property name="ObjectShortName">sync_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/sync_n" type="logic">
+      <obj_property name="ElementShortName">sync_n</obj_property>
+      <obj_property name="ObjectShortName">sync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/a_data" type="array">
+      <obj_property name="ElementShortName">a_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_data[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/b_data" type="array">
+      <obj_property name="ElementShortName">b_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_data[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/c_data" type="array">
+      <obj_property name="ElementShortName">c_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">c_data[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/d_data" type="array">
+      <obj_property name="ElementShortName">d_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">d_data[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/a" type="array">
+      <obj_property name="ElementShortName">a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/b" type="array">
+      <obj_property name="ElementShortName">b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/set_ddr" type="logic">
+      <obj_property name="ElementShortName">set_ddr</obj_property>
+      <obj_property name="ObjectShortName">set_ddr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/led_ctl_i0/GPIO_DIP" type="array">
+      <obj_property name="ElementShortName">GPIO_DIP[7:0]</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clocked_led_tb/clocked_led/led_ctl_i0/led_o" type="array">
+      <obj_property name="ElementShortName">led_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_o[7:0]</obj_property>
+   </wvobject>
+</wave_config>
