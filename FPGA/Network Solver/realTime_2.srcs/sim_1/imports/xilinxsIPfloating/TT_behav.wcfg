@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TT_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TT" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="131600001fs"></ZoomEndTime>
+      <Cursor1Time time="145030000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <ValueColumnWidth column_width="162"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/TT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/cmd" type="logic">
+      <obj_property name="ElementShortName">cmd</obj_property>
+      <obj_property name="ObjectShortName">cmd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/addressA" type="array">
+      <obj_property name="ElementShortName">addressA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addressA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/ramAddressBH_i" type="array">
+      <obj_property name="ElementShortName">ramAddressBH_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressBH_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/arbiterHIST/ramAddressBVETMAT" type="array">
+      <obj_property name="ElementShortName">ramAddressBVETMAT[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressBVETMAT[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/arbiterHIST/ramAddressB" type="array">
+      <obj_property name="ElementShortName">ramAddressB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressB[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/hDualPortRam/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/hDualPortRam/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/arbiterHIST/ramOutput" type="array">
+      <obj_property name="ElementShortName">ramOutput[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramOutput[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/ramOutputH" type="array">
+      <obj_property name="ElementShortName">ramOutputH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramOutputH[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/adder/i_a" type="array">
+      <obj_property name="ElementShortName">i_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_a[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/adder/i_b" type="array">
+      <obj_property name="ElementShortName">i_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_b[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/arbiterHIST/ramOutput" type="array">
+      <obj_property name="ElementShortName">ramOutput[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramOutput[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/adder/multResult" type="array">
+      <obj_property name="ElementShortName">multResult[31:0]</obj_property>
+      <obj_property name="ObjectShortName">multResult[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/adder/output" type="array">
+      <obj_property name="ElementShortName">output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/accumLast" type="array">
+      <obj_property name="ElementShortName">accumLast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">accumLast[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/adder/accumValidA" type="logic">
+      <obj_property name="ElementShortName">accumValidA</obj_property>
+      <obj_property name="ObjectShortName">accumValidA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/accumValidAreg" type="logic">
+      <obj_property name="ElementShortName">accumValidAreg</obj_property>
+      <obj_property name="ObjectShortName">accumValidAreg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vOnePortRam/wea" type="array">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vOnePortRam/dina" type="array">
+      <obj_property name="ElementShortName">dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/arbiterHIST/ramAddressB" type="array">
+      <obj_property name="ElementShortName">ramAddressB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressB[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/vetmat/adder/disable" type="logic">
+      <obj_property name="ElementShortName">disable</obj_property>
+      <obj_property name="ObjectShortName">disable</obj_property>
+   </wvobject>
+</wave_config>
