@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TT_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TT" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="394790000fs"></ZoomStartTime>
+      <ZoomEndTime time="589790001fs"></ZoomEndTime>
+      <Cursor1Time time="510100000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="249"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="47" />
+   <wvobject fp_name="/TT/main/histvect/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/externalCmd" type="logic">
+      <obj_property name="ElementShortName">externalCmd</obj_property>
+      <obj_property name="ObjectShortName">externalCmd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/externalDone" type="logic">
+      <obj_property name="ElementShortName">externalDone</obj_property>
+      <obj_property name="ObjectShortName">externalDone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/onIVEC" type="logic">
+      <obj_property name="ElementShortName">onIVEC</obj_property>
+      <obj_property name="ObjectShortName">onIVEC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/wr_enV" type="array">
+      <obj_property name="ElementShortName">wr_enV[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_enV[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramAddressV" type="array">
+      <obj_property name="ElementShortName">ramAddressV[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressV[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramInputV" type="array">
+      <obj_property name="ElementShortName">ramInputV[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramInputV[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramOutputV" type="array">
+      <obj_property name="ElementShortName">ramOutputV[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramOutputV[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/wr_enH" type="array">
+      <obj_property name="ElementShortName">wr_enH[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_enH[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramAddressAH" type="array">
+      <obj_property name="ElementShortName">ramAddressAH[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressAH[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramAddressBH" type="array">
+      <obj_property name="ElementShortName">ramAddressBH[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressBH[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramInputH" type="array">
+      <obj_property name="ElementShortName">ramInputH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramInputH[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramOutputH" type="array">
+      <obj_property name="ElementShortName">ramOutputH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramOutputH[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/first" type="logic">
+      <obj_property name="ElementShortName">first</obj_property>
+      <obj_property name="ObjectShortName">first</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/cmd" type="logic">
+      <obj_property name="ElementShortName">cmd</obj_property>
+      <obj_property name="ObjectShortName">cmd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/demuxAddress" type="logic">
+      <obj_property name="ElementShortName">demuxAddress</obj_property>
+      <obj_property name="ObjectShortName">demuxAddress</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/nodeK" type="array">
+      <obj_property name="ElementShortName">nodeK[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nodeK[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/nodeKreg" type="array">
+      <obj_property name="ElementShortName">nodeKreg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nodeKreg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/nodeKreg2" type="array">
+      <obj_property name="ElementShortName">nodeKreg2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nodeKreg2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/nodeM" type="array">
+      <obj_property name="ElementShortName">nodeM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nodeM[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/nodeMreg" type="array">
+      <obj_property name="ElementShortName">nodeMreg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nodeMreg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/conductance" type="array">
+      <obj_property name="ElementShortName">conductance[31:0]</obj_property>
+      <obj_property name="ObjectShortName">conductance[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/conductanceReg" type="array">
+      <obj_property name="ElementShortName">conductanceReg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">conductanceReg[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/IhOld" type="array">
+      <obj_property name="ElementShortName">IhOld[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IhOld[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/vK" type="array">
+      <obj_property name="ElementShortName">vK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vK[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/vM" type="array">
+      <obj_property name="ElementShortName">vM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vM[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/vKM" type="array">
+      <obj_property name="ElementShortName">vKM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vKM[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramOutputV_i" type="array">
+      <obj_property name="ElementShortName">ramOutputV_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ramOutputV_i[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramAddressV_i" type="array">
+      <obj_property name="ElementShortName">ramAddressV_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddressV_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/mult1" type="array">
+      <obj_property name="ElementShortName">mult1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult1[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/mult2" type="array">
+      <obj_property name="ElementShortName">mult2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mult2[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/sum1" type="array">
+      <obj_property name="ElementShortName">sum1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum1[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/sum2" type="array">
+      <obj_property name="ElementShortName">sum2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum2[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/counterFinish" type="array">
+      <obj_property name="ElementShortName">counterFinish[11:0]</obj_property>
+      <obj_property name="ObjectShortName">counterFinish[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/counter" type="array">
+      <obj_property name="ElementShortName">counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/ramAddress" type="array">
+      <obj_property name="ElementShortName">ramAddress[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ramAddress[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/NodesRamAddress" type="array">
+      <obj_property name="ElementShortName">NodesRamAddress[2:0]</obj_property>
+      <obj_property name="ObjectShortName">NodesRamAddress[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/NodesValue" type="array">
+      <obj_property name="ElementShortName">NodesValue[64:0]</obj_property>
+      <obj_property name="ObjectShortName">NodesValue[64:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/wr_en" type="array">
+      <obj_property name="ElementShortName">wr_en[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_en[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/elementsNumber" type="other">
+      <obj_property name="ElementShortName">elementsNumber</obj_property>
+      <obj_property name="ObjectShortName">elementsNumber</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/P" type="logic">
+      <obj_property name="ElementShortName">P</obj_property>
+      <obj_property name="ObjectShortName">P</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/NodesRamAddressreg" type="array">
+      <obj_property name="ElementShortName">NodesRamAddressreg[2:0]</obj_property>
+      <obj_property name="ObjectShortName">NodesRamAddressreg[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/IhOldNew" type="array">
+      <obj_property name="ElementShortName">IhOldNew[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IhOldNew[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/PReg" type="logic">
+      <obj_property name="ElementShortName">PReg</obj_property>
+      <obj_property name="ObjectShortName">PReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TT/main/histvect/IhOldNew2" type="array">
+      <obj_property name="ElementShortName">IhOldNew2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IhOldNew2[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+</wave_config>
