@@ -32,12 +32,12 @@ ACVoltageSource::ACVoltageSource(double Value, double Frequency, double Phase, i
 
 			circuit.AdmittanceMatrix[
 				circuit.numNodes + ID - 1 + circuit.totalSize*(this->nodes[0] - 1)
-			] += 1;
+            ] -= 1;
 
 
 			circuit.AdmittanceMatrix[
 				circuit.totalSize*(circuit.numNodes + ID - 1) + (this->nodes[0] - 1)
-			] += 1;
+            ] += 1;
 
 
 		};
@@ -52,12 +52,12 @@ ACVoltageSource::ACVoltageSource(double Value, double Frequency, double Phase, i
 			*/
 			circuit.AdmittanceMatrix[
 				circuit.numNodes + circuit.totalSize*(this->nodes[1] - 1) + ID - 1
-			] -= 1;
+            ] += 1;
 
 
 			circuit.AdmittanceMatrix[
 				circuit.totalSize*(circuit.numNodes + ID - 1) + (this->nodes[1] - 1)
-			] -= 1;
+            ] -= 1;
 
 
 		};

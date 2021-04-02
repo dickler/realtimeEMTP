@@ -31,12 +31,12 @@ void DCVoltageSource::stamp(Circuit& circuit){
 		//Stamps +1 in the AdmittanceMatrix for the corrects index
 		circuit.AdmittanceMatrix[
 			circuit.numNodes + circuit.totalSize*(this->nodes[0] - 1) + ID - 1
-		] += 1;
+        ] -= 1;
 
 
 		circuit.AdmittanceMatrix[
 			circuit.totalSize*(circuit.numNodes + ID - 1) + (this->nodes[0] - 1)
-		] += 1;
+        ] += 1;
 
 
 	};
@@ -47,12 +47,12 @@ void DCVoltageSource::stamp(Circuit& circuit){
 		//Stamps -1 in the AdmittanceMatrix for the corrects index
 		circuit.AdmittanceMatrix[
 			circuit.numNodes + circuit.totalSize*(this->nodes[1] - 1) + ID - 1
-		] -= 1;
+        ] += 1;
 
 
 		circuit.AdmittanceMatrix[
 			circuit.totalSize*(circuit.numNodes + ID-1) + (this->nodes[1] - 1)
-		] -= 1;
+        ] -= 1;
 
 
 	};

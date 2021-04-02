@@ -16,7 +16,7 @@ Capacitor::Capacitor(double Value, int Node1, int Node2, double Value0, Circuit&
 
 void Capacitor::trapStamp(Circuit &circuit){
     //Creates temporary variables for improved readability
-    double G = ( this->value) / (2*circuit.timeStep);
+    double G = ( this->value)*2 / (circuit.timeStep);
     double n1 = nodes[0] - 1;
     double n2 = nodes[1] - 1;
 
@@ -32,15 +32,15 @@ void Capacitor::trapStamp(Circuit &circuit){
     Then we have:
     Ik,m(t-dt) = - Ik,m(t-2*dt) - 2 * G*Vk,m(t-dt).
     */
-    Ih = -Ihh-2*G*(*(Voltage[0])-*(Voltage[1]));
+    Ihh = -Ihh+2*G*(*(Voltage[0])-*(Voltage[1]));
     /*
     Stamps the Ih in the RHS vector
     */
     if (n1 != -1) {
-        circuit.RightHandVector[n1] -= Ih;
+        circuit.RightHandVector[n1] += Ihh;
     }
     if (n2 != -1) {
-        circuit.RightHandVector[n2] += Ih;
+        circuit.RightHandVector[n2] -= Ihh;
     }
 
 
@@ -53,7 +53,7 @@ void Capacitor::stamp(Circuit& circuit) {
 	double StampValue;
 	double Stmp;
 	int n = 0, nn = 0;
-    StampValue = (this->value)/ circuit.timeStep;
+    StampValue = 2*(this->value)/ circuit.timeStep;
 
 
 	//for each node adds to the diagonal a G value
@@ -103,7 +103,7 @@ Stamps the RHS vector
 void Capacitor::stampRightHand(Circuit& circuit) {
 
 	//Creates temporary variables for improved readability
-    double G = ( this->value) / circuit.timeStep;
+    double G = (2* this->value) / circuit.timeStep;
     double n1 = nodes[0] - 1;
 	double n2 = nodes[1] - 1;
 
@@ -120,15 +120,15 @@ void Capacitor::stampRightHand(Circuit& circuit) {
 	Ik,m(t-dt) = - Ik,m(t-2*dt) - 2 * G*Vk,m(t-dt).
 	*/
     Ihh= Ih;
-    Ih = -G*(*(Voltage[0])-*(Voltage[1]));
+    Ih = -Ih+2*G*(*(Voltage[0])-*(Voltage[1]));
 	/*
 	Stamps the Ih in the RHS vector
 	*/
 	if (n1 != -1) {
-		circuit.RightHandVector[n1] -= Ih;
+        circuit.RightHandVector[n1] += Ih;
 	}
 	if (n2 != -1) {
-		circuit.RightHandVector[n2] += Ih;
+        circuit.RightHandVector[n2] -= Ih;
 	}
 
 
