@@ -14,9 +14,13 @@ public:
     void calculateState() override;
     std::string classQuery() override {return "TH";}
     std::string nodesQuery() override;
-    int ID;
+
     double getCurrent(Circuit& circuit) override;
-private:
+    void stampConductance(Circuit& circuit) override;
+    void stampPejovic(Circuit& circuit) override;
+    void stampMANA(Circuit& circuit) override;
     bool *gate;
+private:
+
 };
 

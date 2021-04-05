@@ -35,16 +35,16 @@ void Inductor::trapStamp(Circuit &circuit){
     Ik,m(t-dt) = + Ik,m(t-2*dt) + 2 * G * Vk,m(t-dt).
     */
 
-    Ih = Ihh + 2*G*(*(this->Voltage[0]) - *(this->Voltage[1]));
+    Ihh = Ihh - 2*G*(*(this->Voltage[0]) - *(this->Voltage[1]));
 
     /*
     Stamps the Ih in the RHS vector
     */
     if (n1 != -1) {
-        circuit.RightHandVector[n1] -= Ih;
+        circuit.RightHandVector[n1] += Ih;
     }
     if (n2 != -1) {
-        circuit.RightHandVector[n2] += Ih;
+        circuit.RightHandVector[n2] -= Ih;
     }
 
 
@@ -124,16 +124,16 @@ void Inductor::stampRightHand(Circuit& circuit) {
 	Ik,m(t-dt) = + Ik,m(t-2*dt) + 2 * G * Vk,m(t-dt).
 	*/
     Ihh= Ih;
-    Ih = Ih + G*(*(this->Voltage[0]) - *(this->Voltage[1]));
+    Ih = Ih - G*(*(this->Voltage[0]) - *(this->Voltage[1]));
 
 	/*
 	Stamps the Ih in the RHS vector 
 	*/
 	if (n1 != -1) {
-		circuit.RightHandVector[n1] -= Ih;
+        circuit.RightHandVector[n1] += Ih;
 	}
 	if (n2 != -1) {
-		circuit.RightHandVector[n2] += Ih;
+        circuit.RightHandVector[n2] -= Ih;
 	}
 
 

@@ -11,6 +11,8 @@
 #include <sstream>
 #define _use_math_defines
 #include <math.h>
+#include <functional>
+
 
 /*
 Elements Includes
@@ -18,6 +20,8 @@ Elements Includes
 
 #include "Elements.h"
 
+#define PEJOVIC
+#define EXPANDED_SWITCH
 
 #ifdef IdealSwitch
     #ifdef EXPANDED_SWITCH
@@ -64,8 +68,6 @@ void SeeMatrix(Circuit& circuit) {
 
 int main(void) {
 
-
-
     /*
     Declares the variables
     */
@@ -73,8 +75,12 @@ int main(void) {
     std::ifstream netlist;
 
     circuit.SetOutputFile("example.csv");
-    circuit.addTracker("V1",1);
-//    circuit.addTracker("V2",3);
+    circuit.addTracker("Vin",0);
+    circuit.addTracker("Vout",1);
+
+
+
+
 
     /*
     Opens the netlist file and reads it to create the circuit and vectors

@@ -24,6 +24,7 @@ public:
     virtual double getVoltage(Circuit& circuit);
     virtual double getCurrent(Circuit& circuit) = 0;
 	std::string Name;
+    Circuit* parentCircuit;
 
     std::vector<double*> Voltage;
     virtual void linkCircuit(Circuit& circuit);

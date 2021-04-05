@@ -10,6 +10,10 @@
 #include <complex>
 #include "Elements.h"
 #define maxSwitches 256
+
+
+
+
 //#define TIMED
 #ifdef TIMED
 #include <QElapsedTimer>
@@ -119,7 +123,7 @@ void Circuit::Solve() {
     timer.start();
 #endif
 	//Creates and assign temporary dynamic 1D arrays
-	//a = AdmittanceMatrix
+    //a = AdmittanceMatrix
 	//b = RightHandVector
 	double* a;
 	double* b;
@@ -146,28 +150,27 @@ void Circuit::Solve() {
 	//returning b as the solved vector
 	//LAPACKE_dgetrs(LAPACK_ROW_MAJOR, 'N', m, 1, a, m, ipiv, b, 1);
 	cblas_dgemv(CblasRowMajor, CblasNoTrans, m, m, 1, a, m, b, 1, 0, c, 1);
-	//Declares c as vector and assings it as the values of b
+    //Declares c as vector and assings it as the values of b
 	std::vector<double> result(c, c + m);
     backupSolved = this->SolvedVector;
 	//Pass the result to its member SolvedVector
-    this->SolvedVector = result;
-    if(this->switchFlag) {
-        this->switchFlag=0;
 
-    }
-    else{
-        this->newStep();
-        this->trapStepStamp();
-        for(switchDevice* i:this->SwitchVector){
-        if(std::string("D TH").find(i->classQuery()) != std::string::npos){
-            i->calculateState();
-        }
+    this->SolvedVector = result;
+
+
+    for(switchDevice* i:this->SwitchVector){
+    if(std::string("D TH").find(i->classQuery()) != std::string::npos){
+        i->calculateState();
     }
     if(currentState != this->readState()){
+        std::cout << this->time << "\tSTATE CHANGED\n" ;
+        for(DynamicElement* i:this->DynamicVector){
+            i->Ih = i->Ihh;
+        }
         this->SolvedVector = backupSolved;
         this->importState();
         this->Solve();
-        this->switchFlag=1;
+
     }
     else{
         this->setState(currentState);
@@ -378,7 +381,7 @@ void Circuit::optimizeG(std::vector< switchDevice* > SwitchVector, double range,
 	/*
 	Declares the variables that will be used
 	*/
-	double step = range / points;
+
 	int switches = SwitchVector.size();
 	std::vector< double > BestG;
 	std::vector<std::vector<std::complex<double> > > EigenVec;
@@ -407,7 +410,7 @@ void Circuit::optimizeG(std::vector< switchDevice* > SwitchVector, double range,
 			else {
 
 				(*SwitchVector[j]).S = 0;
-				(*SwitchVector[j]).idealStamp(*this);
+                (*SwitchVector[j]).idealStamp(*this);
 
 			}
 		}
@@ -415,7 +418,6 @@ void Circuit::optimizeG(std::vector< switchDevice* > SwitchVector, double range,
 		/*
 		Calculate and stores the eigenvalues for each switch configuration
 		*/
-
 		this->takeEigen(this->AdmittanceMatrix, Eigen);
 		EigenVec.push_back(Eigen);
 
@@ -580,7 +582,9 @@ void Circuit::importNetlist(std::ifstream &netlist){
         netlist.ignore(std::numeric_limits<std::streamsize>::max(), ' ');
         netlist >> this->simTime >> this->timeStep;
         netlist.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
+        netlist.ignore(std::numeric_limits<std::streamsize>::max(), ' ');
+        netlist >> this->switchFlag;
+        netlist.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         /*
          Reads through the netlist and store Elements in its vectors
         */
@@ -672,10 +676,10 @@ void Circuit::createElement(std::string Line){
     }
 
     else if (Arguments[0] == "S") {
-        // name >> node1 >> node2 >> Gate >> value;
+        // name >> node1 >> node2 >> value;
         this->SwitchVector.insert(this->SwitchVector.begin(),
-                                  new Switch(std::stod(Arguments[5]), std::stoi(Arguments[2]), std::stoi(Arguments[3]),
-                                             std::stoi(Arguments[4]), *this));
+                                  new Switch(std::stod(Arguments[4]), std::stoi(Arguments[2]), std::stoi(Arguments[3])
+                                             , *this));
         this->SwitchVector[0]->Name = Arguments[1];;
     }
     else if (Arguments[0] == "TH") {
@@ -735,6 +739,9 @@ void Circuit::calculateDimension(){
         Handler.clear();
     }
     for(ElectricElement* i : this->SwitchVector){
+        if(this->switchFlag == 2) Vsources++; // MANA uses the auxiliar rows and columns in the Admitance Matrix.
+
+
         Handler.str(i->nodesQuery());
         while(Handler>>node){
             if(n<node){
@@ -766,6 +773,16 @@ void Circuit::RHSStamp(){
     for(DynamicElement* i: this->DynamicVector){
         i->stampRightHand(*this);
     }
+
+    /*
+    For Pejovic
+    */
+
+    if(this->switchFlag==1){
+    for(switchDevice* i:this->SwitchVector){
+        i->stampRightHand(*this);
+    }}
+
 }
 
 void Circuit::trapStepStamp(){
@@ -802,13 +819,15 @@ void Circuit::createStateMatrices(){
         this->setState(i);
         for(switchDevice* j : this->SwitchVector){
             j->stamp(*this);
-            std::cout << j->Name << " " <<  j->S<<"\n";
+            //std::cout << j->Name << " " <<  j->S<<"\n";
         };
 
-        this->ToString();
+//        this->ToString();
 
         this->InvertMatrix();
-        this->ToStringInv();
+
+//        this->ToStringInv();
+
         this->MatrixStorage.push_back(new std::vector<double>(this->AdmittanceMatrix));
         this->invMatrixStorage.push_back(new std::vector<double>(this->InvAdmittanceMatrix));
     }
@@ -887,15 +906,21 @@ void Circuit::preSimulation(std::ifstream &netlist){
     this->importNetlist(netlist);
     this->calculateDimension();
     this->storeNames();
-
     this->staticAdmittanceStamp();
     this->staticRHSStamp();
     this->Save();
+    if(this->switchFlag==1)this->optimizeG(this->SwitchVector,0.5,3000);
     this->registerVector();
     this->createStateMatrices();
     this->linkElements();
 }
-
+/*
+ *
+ * Variables for Control:
+ *
+ * int bottomS,upperS;
+ * double maxV,minV;
+ */
 void Circuit::Simulate(){
     this->time=0;
     this->importState();
@@ -903,6 +928,46 @@ void Circuit::Simulate(){
         //
         //CHANGE controlSignal HERE
         //
+
+
+
+//        if(((fmod(this->time , 0.5e-3)/0.5e-3)>0.5)){
+//            *this->controlSignals[0]=(bool)1;
+//        }
+//        else{
+//            *this->controlSignals[0]=(bool)0;
+//        }
+
+
+
+//                if(this->time>8e-3&&this->time<14e-3)
+//                    *this->controlSignals[1]=(bool)1;
+//                else *this->controlSignals[1]=(bool)0;
+//                std::cout << *this->controlSignals[1];
+
+
+//        Controle Retificador
+//        maxV = 0;
+//        minV = 0;
+//        for(int i = 0; i<6; i++){
+//            if(i<3){
+//                if(*this->SwitchVector[i]->Voltage[1]<minV){
+//                    minV=*this->SwitchVector[i]->Voltage[1];
+//                    upperS = i;
+//                }
+//            }
+//            else{
+//                if(*this->SwitchVector[i]->Voltage[0]>maxV){
+//                    maxV=*this->SwitchVector[i]->Voltage[0];
+//                    bottomS = i;
+//                }
+//            }
+//        }
+
+//        std::cout << minV << "," << maxV <<"\n";
+//        for(int i =0; i<6;i++){
+//            *this->controlSignals[i] = (i==5-upperS||i==5-bottomS);
+//        }
         //
         //END CHANGE controlSignal Here
         //
@@ -913,12 +978,14 @@ void Circuit::Simulate(){
         this->newStep();
         this->RHSStamp();
         this->Solve();
+
+//        std::cout << this->SolvedVector[2]<<"\n";
 //        this->ToStringSolved();
 //        std::cout << this->readState() << "\n";
-        if(this->switchFlag==1){
-            this->time += this->timeStep;
-        }
+
         if(this->outputFile.is_open()) this->writeOutput();
+
+
         this->time += this->timeStep;
     }
 }

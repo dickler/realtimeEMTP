@@ -34,7 +34,6 @@ private:
 
 
 
-
 public:
     /*
     Matrix Variables
