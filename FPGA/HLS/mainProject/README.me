@@ -1,0 +1,22 @@
+###############################################################################################
+
+This folder contains all the files to recreate the original VITIS HLS project.
+For recreate the project, follow these below steps:
+
+1. Create a new project in VITIS HLS;
+
+2. DOES NOT SELECT ANY DESIGN OR TESTBENCH SOURCE;
+
+3. Set a target clock period of 10 nanoseconds with 2% of uncertainty;
+
+4. Choose the VC707EVM board as the target device and finalize the project;
+
+5. Copy the files "main_core.cpp", "main_core.h", and "main_core_tb.cpp" to the project diretory;
+
+6. In the opened project in VITIS HLS, add "main_core.cpp" as a design source and "main_core_tb.cpp" as a testbench source.
+
+###############################################################################################
+
+The others files in this folder are python files to help projecting a
+boost converter and generate all MANA pre-simulation data. This data
+can be passed as an input to "main_core.cpp" and "main_core.h"
