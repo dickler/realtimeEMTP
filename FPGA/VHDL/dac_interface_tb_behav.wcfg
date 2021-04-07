@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="dac_interface_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="dac_interface_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="32550000001fs"></ZoomEndTime>
+      <Cursor1Time time="853020000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="248"></NameColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="37" />
+   <wvobject fp_name="/dac_interface_tb/clk_pin_p" type="logic">
+      <obj_property name="ElementShortName">clk_pin_p</obj_property>
+      <obj_property name="ObjectShortName">clk_pin_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/clk_pin_n" type="logic">
+      <obj_property name="ElementShortName">clk_pin_n</obj_property>
+      <obj_property name="ObjectShortName">clk_pin_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/rst_pin" type="logic">
+      <obj_property name="ElementShortName">rst_pin</obj_property>
+      <obj_property name="ObjectShortName">rst_pin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/led_pins" type="array">
+      <obj_property name="ElementShortName">led_pins[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_pins[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/a_p" type="array">
+      <obj_property name="ElementShortName">a_p[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_p[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/a_n" type="array">
+      <obj_property name="ElementShortName">a_n[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_n[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/b_p" type="array">
+      <obj_property name="ElementShortName">b_p[15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_p[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/b_n" type="array">
+      <obj_property name="ElementShortName">b_n[15:0]</obj_property>
+      <obj_property name="ObjectShortName">b_n[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/out_a" type="array">
+      <obj_property name="ElementShortName">out_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_a[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/out_b" type="array">
+      <obj_property name="ElementShortName">out_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_b[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/out_c" type="array">
+      <obj_property name="ElementShortName">out_c[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_c[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/out_d" type="array">
+      <obj_property name="ElementShortName">out_d[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_d[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/data_clk_p" type="logic">
+      <obj_property name="ElementShortName">data_clk_p</obj_property>
+      <obj_property name="ObjectShortName">data_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/data_clk_n" type="logic">
+      <obj_property name="ElementShortName">data_clk_n</obj_property>
+      <obj_property name="ObjectShortName">data_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/sync_p" type="logic">
+      <obj_property name="ElementShortName">sync_p</obj_property>
+      <obj_property name="ObjectShortName">sync_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/sync_n" type="logic">
+      <obj_property name="ElementShortName">sync_n</obj_property>
+      <obj_property name="ObjectShortName">sync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/control" type="array">
+      <obj_property name="ElementShortName">control[2:0]</obj_property>
+      <obj_property name="ObjectShortName">control[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/sf_d" type="array">
+      <obj_property name="ElementShortName">sf_d[7:4]</obj_property>
+      <obj_property name="ObjectShortName">sf_d[7:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/s_in" type="logic">
+      <obj_property name="ElementShortName">s_in</obj_property>
+      <obj_property name="ObjectShortName">s_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_RS_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_RS_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_RS_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_RW_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_RW_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_RW_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_E_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_E_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_E_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_DB7_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_DB7_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_DB7_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_DB6_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_DB6_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_DB6_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_DB5_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_DB5_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_DB5_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/LCD_DB4_LS" type="logic">
+      <obj_property name="ElementShortName">LCD_DB4_LS</obj_property>
+      <obj_property name="ObjectShortName">LCD_DB4_LS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW0" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW0</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW1" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW1</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW2" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW2</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW3" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW3</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW4" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW4</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW5" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW5</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW6" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW6</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_DIP_SW7" type="logic">
+      <obj_property name="ElementShortName">GPIO_DIP_SW7</obj_property>
+      <obj_property name="ObjectShortName">GPIO_DIP_SW7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/GPIO_SW_C" type="logic">
+      <obj_property name="ElementShortName">GPIO_SW_C</obj_property>
+      <obj_property name="ObjectShortName">GPIO_SW_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/cmd" type="logic">
+      <obj_property name="ElementShortName">cmd</obj_property>
+      <obj_property name="ObjectShortName">cmd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dac_interface_tb/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>
